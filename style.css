@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Moirai+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #292929;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  flex-direction: column;
+}
+
+.clock {
+  background: #292929;
+  width: 80vh;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  box-shadow: inset 0 0 20px rgb(0, 0, 0);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock span {
+  color: #636363;
+  position: absolute;
+  text-align: center;
+  inset: 20px;
+  transform: rotate(calc(30deg * var(--i)));
+}
+.clock span b.num {
+  transform: rotate(calc(-30deg * var(--i)));
+  display: inline-block;
+  font-size: 2em;
+}
+.clock .circle {
+  width: calc(80vh - 130px);
+  aspect-ratio: 1/1;
+  border: 2px solid rgb(54, 54, 54);
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.clock .circle i {
+  width: 16px;
+  height: 50%;
+  background: var(--dc);
+  position: absolute;
+  scale: 50%;
+  transform-origin: bottom;
+  opacity: 0.8;
+  justify-content: center;
+}
+.clock .circle:nth-child(1) i {
+  width: 8px;
+}
+.clock .circle::before {
+  content: "";
+  width: 15px;
+  aspect-ratio: 1/1;
+  background: var(--dc);
+  border-radius: 50%;
+  transform: translate(0, -50%);
+  box-shadow: 0 0 10px var(--dc), 0 0 20px var(--dc);
+}
+.clock .circle.cm {
+  width: calc(80vh - 200px);
+}
+.clock .circle.ch {
+  width: calc(80vh - 270px);
+}
+
+.clock::before {
+  content: "";
+  width: 10px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  position: absolute;
+  border: 2px solid #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  background: #292929;
+}
+
+.clock::after {
+  content: "Arif";
+  color: #fff;
+  font-family: "Moirai One", cursive;
+  position: absolute;
+  top: 35%;
+  font-size: 2em;
+}
+
+#dclock {
+  min-width: 200px;
+  display: flex;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 50px;
+  font-size: 24px;
+  box-shadow: inset 0 0 10px #000000;
+  justify-content: center;
+}
+#dclock div {
+  color: var(--dnc);
+}
+#dclock div:not(#ap, :nth-child(3))::after {
+  content: ":";
+  padding: 0 2px;
+}
+#dclock #ap {
+  color: #fff;
+  font-size: 50%;
+  align-self: center;
+  padding-left: 10px;
+}/*# sourceMappingURL=style.css.map */

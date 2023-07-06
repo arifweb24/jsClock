@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="clock">
+        <div style="--dc:lime" class="circle" id="ss"><i></i></div>
+        <div style="--dc:yellow" class="circle cm" id="mm"><i></i></div>
+        <div style="--dc:red" class="circle ch" id="hh"><i></i></div>
+
+        <span style="--i:1"><b>|</b></span>
+        <span style="--i:2"><b>|</b></span>
+        <span style="--i:3"><b class="num">3</b></span>
+        <span style="--i:4"><b>|</b></span>
+        <span style="--i:5"><b>|</b></span>
+        <span style="--i:6"><b class="num">6</b></span>
+        <span style="--i:7"><b>|</b></span>
+        <span style="--i:8"><b>|</b></span>
+        <span style="--i:9"><b class="num">9</b></span>
+        <span style="--i:10"><b>|</b></span>
+        <span style="--i:11"><b>|</b></span>
+        <span style="--i:12"><b class="num">12</b></span>
+    </div>
+
+    <div id="dclock">
+        <div style="--dnc:red" id="dh">00</div>
+        <div style="--dnc:yellow" id="dm">00</div>
+        <div style="--dnc:lime" id="ds">00</div>
+        <div id="ap">AM</div>
+    </div>
+
+    <script src="./clock.js"></script>
+</body>
+</html>
