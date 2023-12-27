@@ -6,8 +6,7 @@ setInterval(() =>{
     let day = new Date();
     let hh = day.getHours() * 30;
     let mm = day.getMinutes() * 6;
-    const seconds = now.getSeconds();
-    let ss = (seconds + now.getMilliseconds() / 1000) * 6;
+    let ss = day.getSeconds() * 6;
 
     hr.style.transform = `rotateZ(${hh+(mm/12)}deg)`;
     mn.style.transform = `rotateZ(${mm+(ss/60)}deg)`;
